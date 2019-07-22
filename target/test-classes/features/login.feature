@@ -1,6 +1,6 @@
 Feature: login functionality
 
-  @wip #work in progress
+   #work in progress
   Scenario: teacher login
    # Given user on the login page
     When user logs in using "myemail@gmail.com" and "mysecurepassword"

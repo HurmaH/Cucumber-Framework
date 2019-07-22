@@ -1,6 +1,10 @@
 package com.cybertek.step_definitions;
 
+import com.cybertek.pages.MapPage;
+import com.cybertek.pages.SignInPage;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 
 public class LoginPageStepDef {
 
@@ -9,6 +13,10 @@ public class LoginPageStepDef {
 
         System.out.println("Email from feature file: "+email);
         System.out.println("Password from feature file: "+pass);
+
+        SignInPage signInPage = new SignInPage();
+        signInPage.login(email,pass);
+
     }
 
     @When("the title should be {string}")
@@ -21,4 +29,17 @@ public class LoginPageStepDef {
 
         System.out.println("count = "+count);
     }
+
+
+    @Then("location should be {string}")
+    public void location_should_be(String expectedLocation) {
+
+        MapPage mapPage = new MapPage();
+
+        String actualLocation = mapPage.location.getText();
+        Assert.assertEquals(expectedLocation, actualLocation);
+
+    }
+
+
 }
