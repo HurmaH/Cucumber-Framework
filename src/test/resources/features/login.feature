@@ -1,9 +1,18 @@
+@login
 Feature: login functionality
 
-   #work in progress
   Scenario: teacher login
-   # Given user on the login page
-    When user logs in using "myemail@gmail.com" and "mysecurepassword"
-    #Then homepage should be displayed
-    And the title should be "my application title"
-    And there should be 22 menu options
+    Given user on the login page
+    And I add another useless line
+    # use login info of a teacher
+    When user logs in using "myemail@hotmail.com" and "mysecurepassword"
+    Then homepage should be displayed
+    And title should be "homepage"
+    And there should be 44 menu options
+
+  Scenario: team leader login
+    Given user on the login page
+      # use the login info of a team lead
+    When user logs in using "myemail@gmail.com" and "regularpassword"
+    Then homepage should be displayed
+    And title should be "homepage"

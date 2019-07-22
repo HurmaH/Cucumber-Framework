@@ -8,10 +8,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {
+                "html:target/default-cucumber-reports"
+        },
         features = "src/test/resources/features", //shows source of feature file package
         glue = "com/cybertek/step_definitions"   //connecting to step_def
-        , dryRun = false
-        , tags = "@wip"
+        , dryRun = true
+        , tags = "@login"
         //selecting tag from one feature folder
         // tags="@member, @teacher"
 )

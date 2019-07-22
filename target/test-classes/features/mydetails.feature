@@ -1,5 +1,5 @@
 Feature: My details page
-
+@wip
   Scenario: room information
     Given user on the login page
     When user logs in using "daldie7l@seattletimes.com" and "ruthannjohnes"
@@ -12,13 +12,13 @@ Feature: My details page
       | duke      | less is more        |
       | berkeley  | less is more        |
 
-@wip
+
   Scenario: my information
     Given user on the login page
     And user logs in using "daldie7l@seattletimes.com" and "ruthannjohnes"
     When the user goes to the "amazon" page
     Then the user should see their information:
-      | name   | Archibald Melloy    |
+      | name   | Ruthann Johnes      |
       | role   | student-team-leader |
       | team   | CodeHunters         |
       | batch  | #8                  |

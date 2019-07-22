@@ -1,4 +1,4 @@
-
+@login
 Feature: campus locations
 
   Scenario: VA - dark side
